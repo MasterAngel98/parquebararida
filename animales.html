@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Animales | Parque Bararida</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="Shortcut Icon" href="images/icon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/modals.css"> <!-- Modal personalizado -->
+
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+	<!-- Cabecera Principal -->
+	<header id="main_header">
+		<div class="logo_img">
+			<a href="index.html"><img src="images/logo1.png" alt="logo Bararida"></a>
+		</div>
+
+		<div class="cuenta"> <!-- Botón de perfil del usuario -->
+			<a href="#" class="user_icon">
+				<img src="images/user1.png">
+			</a>
+			<a href="#" class="arrow">
+				<img src="images/arrow1.png">
+			</a>
+		</div>
+
+		<nav class="main_nav"> <!-- Botones de Navegación -->
+			<ul>
+				<li><a href="personal.html">Personal</a></li>
+				<li><a href="animales.html">Animales</a></li>
+				<li><a href="alimentos.html">Alimentos</a></li>
+				<li><a onclick="enfermedades_alert()">Enfermedades</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Barra de navegación lateral -->
+	<nav class="side_nav">
+		<div class="nav_title">
+			<span>ADMINISTRAR ANIMALES</span>
+		</div>
+		
+		<ul>
+			<li><a href="#">Ver Animales</a></li>
+			<li><a href="#register_box">Registrar Nuevo</a></li>
+			<li><a href="#alert_modal">Modificar</a></li>
+			<li><a href="#alert_modal">Eliminar</a></li>
+		</ul>
+	</nav>
+
+	<!-- Contenido Principal -->
+	<section class="content">
+		<header class="content_header">
+			<h1>ANIMALES</h1>
+		</header>
+		<article class="container">
+			<table class="an_table">
+				<thead>
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">Especie</th>
+						<th scope="col">ID</th>
+						<th scope="col">Hábitat</th>
+						<th scope="col">Ultima Revisión</th>
+						<th scope="col">Vacunas</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" id="cbox1"></td>
+						<td><label for="cbox1"><span class="table_td">Tigre de Bengala, macho</span></label></td>
+						<td><label for="cbox1"><span class="table_td">T01</span></label></td>
+						<td><label for="cbox1"><span class="table_td">Sabana S1</span></label></td>
+						<td><label for="cbox1"><span class="table_td">25-06-2020</span></label></td>
+						<td><label for="cbox1"><span class="table_td">Rinotraqueitis felina, Calicivirus</span></label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="cbox2"></td>
+						<td><label for="cbox2"><span class="table_td">Tigre de Bengala, hembra</span></label></td>
+						<td><label for="cbox2"><span class="table_td">T02</span></label></td>
+						<td><label for="cbox2"><span class="table_td">Sabana S1</span></label></td>
+						<td><label for="cbox2"><span class="table_td">19-06-2020</span></label></td>
+						<td><label for="cbox2"><span class="table_td">Rinotraqueitis felina, Calicivirus</span></label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="cbox3"></td>
+						<td><label for="cbox3"><span class="table_td">Tigre de Bengala, hembra</span></label></td>
+						<td><label for="cbox3"><span class="table_td">T03</span></label></td>
+						<td><label for="cbox3"><span class="table_td">Sabana S1</span></label></td>
+						<td><label for="cbox3"><span class="table_td">30-05-2020</span></label></td>
+						<td><label for="cbox3"><span class="table_td">Rinotraqueitis felina, Calicivirus</span></label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="cbox4"></td>
+						<td><label for="cbox4"><span class="table_td">Leon, macho</span></label></td>
+						<td><label for="cbox4"><span class="table_td">L01</span></label></td>
+						<td><label for="cbox4"><span class="table_td">Sabana S2</span></label></td>
+						<td><label for="cbox4"><span class="table_td">01-07-2020</span></label></td>
+						<td><label for="cbox4"><span class="table_td">Saranpíon, SABIN</span></label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="cbox5"></td>
+						<td><label for="cbox5"><span class="table_td">Leon, hembra</span></label></td>
+						<td><label for="cbox5"><span class="table_td">L02</span></label></td>
+						<td><label for="cbox5"><span class="table_td">Sabana S2</span></label></td>
+						<td><label for="cbox5"><span class="table_td">05-05-2020</span></label></td>
+						<td><label for="cbox5"><span class="table_td">SABIN</span></label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="cbox6"></td>
+						<td><label for="cbox6"><span class="table_td">Tortuga galapado, macho</span></label></td>
+						<td><label for="cbox6"><span class="table_td">TG1</span></label></td>
+						<td><label for="cbox6"><span class="table_td">Acuario 1</span></label></td>
+						<td><label for="cbox6"><span class="table_td">01-08-2019</span></label></td>
+						<td><label for="cbox6"><span class="table_td">Ninguna</span></label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="cbox7"></td>
+						<td><label for="cbox7"><span class="table_td">Ejemplo especie</span></label></td>
+						<td><label for="cbox7"><span class="table_td">EJM</span></label></td>
+						<td><label for="cbox7"><span class="table_td">Ejemplo 01</span></label></td>
+						<td><label for="cbox7"><span class="table_td">01-01-2000</span></label></td>
+						<td><label for="cbox7"><span class="table_td">Nombre de vacuna</span></label></td>
+					</tr>
+				</tbody>
+			</table>
+		</article>
+	</section>
+
+	<!-- Sección para registrar Animales, oculto por defecto -->
+	<div class="register_box" id="register_box">
+		<header class="register_header">
+			<h1>REGRISTRAR NUEVO ANIMAL</h1>
+		</header>
+		<div class="register_body">
+			<form class="register_form">
+				<a href="#" class="clsx">&times;</a>
+				<label>
+					<h2>Especie:</h2>
+					<input type="text" id="campo1" name="especie" autocomplete="off">
+				</label>
+				<label>
+					<h2>ID:</h2>
+					<input type="text" id="campo2" name="id" autocomplete="off">
+				</label>
+				<label>
+					<h2>Vacunas:</h2>
+					<input type="text" id="campo3" name="vacunas" autocomplete="off">
+				</label>
+				<h2>Sexo:</h2>
+				<label class="radio"><input type="radio" name="sexo" value="h">Hembra</label>
+				<label class="radio"><input type="radio" name="sexo" value="m">Macho</label>
+				<h2>Hábitat:</h2>
+				<select name="habitat">
+					<option value="0" style="color: #999">Elija una opción</option>
+					<option value="1">Sabana S1</option>
+					<option value="2">Sabana S2</option>
+					<option value="3">Acuario 01</option>
+					<option value="4">Jungla J1</option>
+					<option value="5">Tropico T1</option>
+					<option value="6">Otro</option>
+				</select>
+				<label>
+					<h2>Última revisión:</h2>
+					<input type="date" name="ult_rev">
+				</label>
+				<button type="summit" onclick="return alert_msg()">Guardar</button>
+				<button type="reset" onclick="go_back()">Cancelar</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Modal persoalizado -->
+	<div id="alert_modal" class="modal">
+		<div class="modal_content">
+			<div class="modal_header">
+				<a href="#">&times;</a>
+				<h4>Alerta</h4>
+			</div>
+			<div class="modal_body">
+				<p id="modal_msg">Ups! Este modulo aun se encuentra en construcción.</p>
+			</div>
+			<div class="modal_footer">
+				<a href="#" id="modal_btn" onmouseleave="reset_modal()">Aceptar</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Iniciar Sesión | Parque Bararida</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="Shortcut Icon" href="images/icon.ico">
+	<link rel="stylesheet" type="text/css" href="css/Login_Interface.css">
+	<link rel="stylesheet" type="text/css" href="css/modals.css"> <!-- Modal personalizado -->
+
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+	<div id="contenedor">
+		<div id="caja_izquierda">
+			<span id="bienvenido">Bienvenido</span>
+			<img src="images/logo1.png" id="logo">
+			<a id="registrar" onclick="register_alert()">Registrar Usuario</a>
+		</div>
+
+		<div id="login_box">
+			<span id="iniciar_sesion">INICIAR SESIÓN</span>
+			<br>
+			<span id="descripcion">Parque Zoológico y Botánico Bararida</span>
+			<form onsubmit="return validar_login()" method="post">
+				<input type="text" name="usuario" id="user" placeholder="Cédula" maxlength="8" class="login_form" autofocus>
+				<br>
+				<input type="password" name="clave" id="password" placeholder="Clave" maxlength="20" class="login_form">
+				<br>
+				<input type="submit" value="Ingresar" id="login_button">
+				<br>
+			</form>
+		</div>
+	</div>
+
+	<!-- Modal persoalizado -->
+	<div id="alert_modal" class="modal">
+		<div class="modal_content">
+			<div class="modal_header">
+				<a href="#">&times;</a>
+				<h4>Alerta</h4>
+			</div>
+			<div class="modal_body">
+				<p id="modal_msg">Ups! Este modulo aun se encuentra en construcción.</p>
+			</div>
+			<div class="modal_footer">
+				<a href="#" id="modal_btn" onmouseleave="reset_modal()">Aceptar</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

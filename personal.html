@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Personal | Parque Bararida</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="Shortcut Icon" href="images/icon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/modals.css"> <!-- Modal personalizado -->
+
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+	<!-- Cabecera Principal -->
+	<header id="main_header">
+		<div class="logo_img">
+			<a href="index.html"><img src="images/logo1.png" alt="logo Bararida"></a>
+		</div>
+
+		<div class="cuenta"> <!-- Botón de perfil del usuario -->
+			<a href="#" class="user_icon">
+				<img src="images/user1.png">
+			</a>
+			<a href="#" class="arrow">
+				<img src="images/arrow1.png">
+			</a>
+		</div>
+
+		<nav class="main_nav"> <!-- Botones de Navegación -->
+			<ul>
+				<li><a href="personal.html">Personal</a></li>
+				<li><a href="animales.html">Animales</a></li>
+				<li><a href="alimentos.html">Alimentos</a></li>
+				<li><a onclick="enfermedades_alert()">Enfermedades</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<!-- Barra de navegación lateral -->
+	<nav class="side_nav">
+		<div class="nav_title">
+			<span>ADMINISTRAR PERSONAL</span>
+		</div>
+		
+		<ul>
+			<li><a href="#">Ver Personal</a></li>
+			<li><a href="#register_box">Registrar Nuevo</a></li>
+			<li><a href="#alert_modal">Modificar</a></li>
+			<li><a href="#alert_modal">Eliminar</a></li>
+		</ul>
+	</nav>
+
+	<!-- Contenido Principal -->
+	<section class="content">
+		<header class="content_header">
+			<h1>PERSONAL</h1>
+		</header>
+		<article class="container">
+			<table class="p_table">
+				<thead>
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">Nombres</th>
+						<th scope="col">Apellidos</th>
+						<th scope="col">Cédula</th>
+						<th scope="col">Cargo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" id="cbox1"></td>
+						<td><label for="cbox1"><span class="table_td">Angel Eduardo</span></label></td>
+						<td><label for="cbox1"><span class="table_td">Torres Martinez</span></label></td>
+						<td><label for="cbox1"><span class="table_td">28.019.404</span></label></td>
+						<td><label for="cbox1"><span class="table_td">Jefe</span></label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="cbox2"></td>
+						<td><label for="cbox2"><span class="table_td">Chris Robert</span></label></td>
+						<td><label for="cbox2"><span class="table_td">Evans</span></label></td>
+						<td><label for="cbox2"><span class="table_td">20.385.117</span></label></td>
+						<td><label for="cbox2"><span class="table_td">Consejo Directivo</span></label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="cbox3"></td>
+						<td><label for="cbox3"><span class="table_td">Selena Marie</span></label></td>
+						<td><label for="cbox3"><span class="table_td">Gomez</span></label></td>
+						<td><label for="cbox3"><span class="table_td">22.930.142</span></label></td>
+						<td><label for="cbox3"><span class="table_td">Bocera Ejecutiva</span></label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="cbox4"></td>
+						<td><label for="cbox4"><span class="table_td">Lionel Andres</span></label></td>
+						<td><label for="cbox4"><span class="table_td">Messi</span></label></td>
+						<td><label for="cbox4"><span class="table_td">17.363.912</span></label></td>
+						<td><label for="cbox4"><span class="table_td">Gerente Ejecutivo</span></label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="cbox5"></td>
+						<td><label for="cbox5"><span class="table_td">Michael Joseph</span></label></td>
+						<td><label for="cbox5"><span class="table_td">Jackson</span></label></td>
+						<td><label for="cbox5"><span class="table_td">15.887.356</span></label></td>
+						<td><label for="cbox5"><span class="table_td">Administrador Directivo</span></label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="cbox6"></td>
+						<td><label for="cbox6"><span class="table_td">Kobe Bean</span></label></td>
+						<td><label for="cbox6"><span class="table_td">Bryant</span></label></td>
+						<td><label for="cbox6"><span class="table_td">23.901.545</span></label></td>
+						<td><label for="cbox6"><span class="table_td">Supervisor General</span></label></td>
+					</tr>
+				</tbody>
+			</table>
+		</article>
+	</section>
+
+	<!-- Sección para registrar Personal, oculto por defecto -->
+	<div class="register_box" id="register_box">
+		<header class="register_header">
+			<h1>REGRISTRAR NUEVO PERSONAL</h1>
+		</header>
+		<div class="register_body">
+			<form class="register_form">
+				<a href="#" class="clsx">&times;</a>
+				<label>
+					<h2>Nombres:</h2>
+					<input type="text" id="campo1" name="nombres" autocomplete="off">
+				</label>
+				<label>
+					<h2>Apellidos:</h2>
+					<input type="text" id="campo2" name="apellidos" autocomplete="off">
+				</label>
+				<label>
+					<h2>Cédula:</h2>
+					<input type="text" id="campo3" name="cedula" autocomplete="off">
+				</label>
+				<h2>Sexo:</h2>
+				<label class="radio"><input type="radio" name="sexo" value="h">Hombre</label>
+				<label class="radio"><input type="radio" name="sexo" value="m">Mujer</label>
+				<label class="radio"><input type="radio" name="sexo" value="o">Otro</label>
+				<h2>Cargo:</h2>
+				<select name="cargo">
+					<option value="0" style="color: #999">Elija una opción</option>
+					<option value="1">Jefe</option>
+					<option value="2">Consejo Directivo</option>
+					<option value="3">Bocera Ejecutiva</option>
+					<option value="4">Gerente Ejecutivo</option>
+					<option value="5">Administrador Directivo</option>
+					<option value="6">Supervisor General</option>
+				</select>
+				<button type="summit" onclick="return alert_msg()">Guardar</button>
+				<button type="reset" onclick="go_back()">Cancelar</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Modal persoalizado -->
+	<div id="alert_modal" class="modal">
+		<div class="modal_content">
+			<div class="modal_header">
+				<a href="#">&times;</a>
+				<h4>Alerta</h4>
+			</div>
+			<div class="modal_body">
+				<p id="modal_msg">Ups! Este modulo aun se encuentra en construcción.</p>
+			</div>
+			<div class="modal_footer">
+				<a href="#" id="modal_btn" onmouseleave="reset_modal()">Aceptar</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
