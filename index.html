@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Parque Bararida</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="Shortcut Icon" href="images/icon.ico">
+	<link rel="stylesheet" type="text/css" href="css/inicio.css">
+	<link rel="stylesheet" type="text/css" href="css/modals.css"> <!-- Modal personalizado -->
+
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+	<div class="contenedor">
+		<div class="header">
+			<span class="title">BIENVENIDO</span>
+			<span class="sub-title">Desde aqui podras administrar toda la información del Parque Bararida</span>
+		</div>
+		<div class="item uno">
+			<a href="#alert_modal">
+				<h3>Administrar<br>Cuenta</h3>
+				<img src="images/user_icon.svg" alt="User_icon">
+				<p>Personaliza tu cuenta, cambia la clave o cierra sesión</p>
+			</a>
+		</div>
+		<div class="item dos">
+			<a href="personal.html">
+				<h3>Personal</h3>
+				<img src="images/personal_icon.svg" alt="Personal_icon">
+				<p>Admistra el personal activo del Parque</p>
+			</a>
+		</div>
+		<div class="item tres">
+			<a href="animales.html">
+				<h3>Animales</h3>
+				<img src="images/animal_icon.svg" alt="Animal_icon">
+				<p>Admistra la información de todos los animales</p>
+			</a>
+		</div>
+		<div class="item cuatro">
+			<a href="alimentos.html">
+				<h3>Alimentos</h3>
+				<img src="images/alimento_icon.svg" alt="Alimento_icon">
+				<p>Administra los alimentos de todas las especies</p>
+			</a>
+		</div>
+		<div class="item cinco">
+			<a onclick="enfermedades_alert()">
+				<h3>Enfermedades</h3>
+				<img src="images/sick_icon.svg" alt="Enfermedades_icon">
+				<p>Sigue el registro de las enfermedades de cada animal</p>
+			</a>
+		</div>
+	</div>
+
+	<!-- Modal persoalizado -->
+	<div id="alert_modal" class="modal">
+		<div class="modal_content">
+			<div class="modal_header">
+				<a href="#">&times;</a>
+				<h4>Alerta</h4>
+			</div>
+			<div class="modal_body">
+				<p id="modal_msg">Ups! Este modulo aun se encuentra en construcción.</p>
+			</div>
+			<div class="modal_footer">
+				<a href="#" id="modal_btn" onmouseleave="reset_modal()">Aceptar</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
